@@ -77,7 +77,6 @@ h2{font-size:clamp(23px,5.5vw,34px);margin-bottom:20px}
 .rafael{background:var(--bg2)}
 .rafael .wrap{display:grid;gap:24px}
 .rafael p{color:var(--mut);margin-bottom:14px}
-.todo{background:rgba(255,194,51,.18);color:var(--cta);border-radius:4px;padding:0 4px}
 .rafael img.me{border-radius:18px;width:100%;max-width:340px;aspect-ratio:1;object-fit:cover}
 .promise{background:var(--card);border-left:4px solid var(--ok);border-radius:12px;padding:16px 18px;margin-top:8px}
 .promise h3{font-size:17px;margin-bottom:8px}
@@ -95,8 +94,8 @@ details p{padding:0 18px 16px}
 .final{text-align:center}
 .final ul{list-style:none;padding:0;display:flex;flex-wrap:wrap;gap:6px 16px;justify-content:center;color:var(--mut);font-size:15px;margin:16px 0 24px}
 .final li::before{content:"✓ ";color:var(--ok)}
-.final .btn{max-width:420px;margin-inline:auto}
-.final .alt{display:inline-block;margin-top:18px;color:var(--mut)}
+.final .btn{display:block;max-width:420px;margin-inline:auto}
+.final .alt{display:block;margin-top:18px;color:var(--mut)}
 
 /* 7. Rodapé */
 footer{border-top:1px solid var(--line);padding:28px 0;font-size:13px;color:var(--mut)}
@@ -199,7 +198,7 @@ footer p+p{margin-top:14px}
     <img class="me" src="assets/rafael-sobre.webp" width="640" height="640" loading="lazy" alt="Rafael Ribeiro">
     <div>
       <h2>Eu fiz esse caminho antes de te mostrar</h2>
-      <p>Prazer, meu nome é Rafael Ribeiro. Sou empresário, programador e investidor nas maiores bolsas de valores do mundo: NASDAQ e NYSE.</span></p>
+      <p>Prazer, meu nome é Rafael Ribeiro. Sou empresário, programador e investidor nas maiores bolsas de valores do mundo: NASDAQ e NYSE.</p>
       <p>Quando comecei a investir nos EUA, minha principal dificuldade era não saber por onde começar: o que analisar, quais eram os principais indicadores e entender o que de fato era relevante analisar. Era um mundo à parte para mim e eu levava muito tempo neste processo. Hoje mantenho uma carteira dolarizada que acompanho diariamente com as ferramentas que eu criei para encurtar este processo de análise dos ativos.</p>
       <p>Criei o Radar de Ativos para ser o guia que eu queria ter tido no começo: explicações simples, análises resumidas mas com o que eu realmente preciso saber antes de investir.</p>
       <div class="promise">
@@ -242,12 +241,12 @@ footer p+p{margin-top:14px}
 <footer>
   <div class="wrap">
     <p>O Radar de Ativos é um projeto de conteúdo educacional e não presta recomendação de investimento, consultoria ou administração de carteira. As informações não consideram o seu perfil, os seus objetivos ou a sua situação financeira. Todo investimento envolve risco, inclusive de perda do capital investido. Rentabilidade passada não garante rentabilidade futura. O Radar de Ativos é uma ferramenta de apoio e não garante resultados.</p>
-    <p><span class="todo">RT Data Soluções em Tecnologia</span> · CNPJ <span class="todo">61604478/0001-15</span> · <a href="#">Política de privacidade</a></p>
+    <p>RT Data Soluções em Tecnologia · CNPJ 61604478/0001-15 · <a href="#">Política de privacidade</a></p>
   </div>
 </footer>
 
 <!-- Botão flutuante do WhatsApp -->
-<a class="wa-float" id="waFloat" href="#" data-link="wa" data-cta="whatsapp_float" target="_blank" rel="noopener" aria-label="Entrar no grupo do WhatsApp">
+<a class="wa-float" id="waFloat" href="#" data-link="group" data-cta="whatsapp_float" target="_blank" rel="noopener" aria-label="Entrar no grupo do WhatsApp">
   <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
 </a>
 
@@ -258,13 +257,12 @@ footer p+p{margin-top:14px}
 
 <script>
 /* ====== CONFIGURAÇÃO: troque só estas duas linhas ====== */
-var GROUP_URL = "#GRUPO";   // convite exclusivo da página (mesmo link em todos os botões do grupo)
+var GROUP_URL = "https://chat.whatsapp.com/EQEE4HCMyysE7oDNwalVoN?s=cl&p=i&iam=2"; // grupo do WhatsApp (mesmo link em todos os botões do grupo)
 var BOT_URL   = "https://wa.me/5585999420892"; // link do bot no WhatsApp (usado só no link secundário final)
-var WA_GROUP_URL = "https://chat.whatsapp.com/EQEE4HCMyysE7oDNwalVoN?s=cl&p=i&iam=2"; // grupo do WhatsApp (botão flutuante)
 /* ======================================================= */
 
 document.querySelectorAll("[data-link]").forEach(function (a) {
-  a.href = { bot: BOT_URL, wa: WA_GROUP_URL }[a.dataset.link] || GROUP_URL;
+  a.href = a.dataset.link === "bot" ? BOT_URL : GROUP_URL;
 });
 
 // Evento para o GTM medir cliques por posição do botão
