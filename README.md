@@ -5,7 +5,7 @@ Página estática (`index.html` + `assets/`). Abra o arquivo no navegador ou pub
 ## O que falta preencher
 1. `index.html`, bloco `CONFIGURAÇÃO` no final: `GROUP_URL` (convite exclusivo do grupo) e `BOT_URL` (WhatsApp do bot).
 2. Textos marcados em amarelo (`.todo`): credencial, dificuldade e resultado do Rafael, razão social e CNPJ.
-3. Trocar `assets/print-*.svg` por imagens reais comprimidas (WebP/JPG) e ajustar os `src`.
+3. Os prints em `assets/print-lista.webp` e `assets/print-bot.webp` são telas do Telegram redesenhadas no visual do WhatsApp; troque por prints reais do WhatsApp quando possível.
 4. Link da Política de privacidade no rodapé.
 
 ## Rastreamento
