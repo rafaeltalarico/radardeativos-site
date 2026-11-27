@@ -32,23 +32,16 @@ h2{font-size:clamp(23px,5.5vw,34px);margin-bottom:20px}
 .btn:active{transform:scale(.98)}
 .btn:focus-visible,a:focus-visible,summary:focus-visible{outline:3px solid #fff;outline-offset:3px}
 
+/* Cabeçalho com logo */
+.site{padding:14px 0 0}
+.site img{width:168px;height:auto}
+
 /* 1. Primeira dobra */
-.hero{padding-top:28px}
+.hero{padding-top:20px}
 .hero .wrap{display:grid;gap:28px}
-.seal{display:inline-block;font-size:12px;font-weight:700;letter-spacing:.08em;color:var(--ok);border:1px solid var(--ok);border-radius:99px;padding:5px 12px;margin-bottom:16px}
-.sub{color:var(--mut);margin:16px 0 20px}
-.gains{list-style:none;padding:0;display:grid;gap:12px;margin-bottom:24px}
-.gains li{display:flex;gap:12px;align-items:center;font-weight:600}
-.gains svg{flex:none;width:32px;height:32px;padding:6px;border-radius:9px;background:var(--card);color:var(--cta)}
-.small{text-align:center;color:var(--mut);font-size:14px;margin-top:10px}
+.sub{color:var(--mut);margin:14px 0 22px}
 .visual{display:flex;justify-content:center}
 .foto{width:100%;max-width:440px;border-radius:18px;aspect-ratio:1;object-fit:cover}
-.phone{width:54%;margin-left:-4%;background:#050a14;border:3px solid var(--line);border-radius:26px;padding:14px 10px;box-shadow:0 14px 40px rgba(0,0,0,.45)}
-.chat{display:grid;gap:8px;font-size:12.5px;line-height:1.4}
-.bub{padding:8px 10px;border-radius:12px;max-width:92%}
-.you{justify-self:end;background:#245a3d;border-bottom-right-radius:3px}
-.bot{background:var(--card);border-bottom-left-radius:3px}
-.bot b{color:var(--cta)}
 
 /* 2. Faixa de confiança */
 .trust{background:var(--bg2);border-block:1px solid var(--line);padding:16px 0;font-size:14.5px;font-weight:600}
@@ -59,14 +52,28 @@ h2{font-size:clamp(23px,5.5vw,34px);margin-bottom:20px}
 .light{background:var(--paper);color:var(--ink)}
 .light p,.light li{color:var(--ink2)}
 .light strong{color:var(--ink)}
+.light .btn{display:block;max-width:420px;margin-inline:auto}
 
 /* 3. O que você recebe */
 .items{list-style:none;padding:0;display:grid;gap:14px;margin-bottom:32px}
-.items li{background:#fff;border:1px solid #dbe5f1;border-radius:14px;padding:16px 18px}
-.prints{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
-.prints img{border-radius:12px;border:1px solid #dbe5f1;width:100%}
-.caption{text-align:center;font-weight:700;color:var(--ink);margin:14px 0 32px}
-.bonus{background:var(--bg);color:var(--tx);border-radius:18px;padding:24px 20px;margin-bottom:24px}
+.items li{display:flex;gap:14px;align-items:flex-start;background:#fff;border:1px solid #dbe5f1;border-radius:14px;padding:16px}
+.items svg{flex:none;width:42px;height:42px;padding:9px;border-radius:12px;background:var(--bg);color:var(--cta)}
+.prints{display:flex;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;margin-inline:-16px;padding:0 16px 6px;scroll-padding-inline:16px;scrollbar-width:none}
+.prints::-webkit-scrollbar{display:none}
+.prints figure{flex:0 0 74%;scroll-snap-align:center}
+.prints img{border-radius:14px;border:1px solid #dbe5f1;width:100%}
+.prints figcaption{text-align:center;font-weight:700;color:var(--ink);font-size:15px;margin-top:10px}
+.swipe{text-align:center;font-size:13px;color:var(--ink2);margin-top:6px}
+.caption{text-align:center;font-weight:700;color:var(--ink);margin:18px 0 32px}
+.bonus{display:grid;gap:22px;justify-items:center;background:var(--bg);color:var(--tx);border-radius:18px;padding:24px 20px;margin-bottom:24px}
+.bonus>div:not(.cover){justify-self:stretch}
+.cover{position:relative;width:150px;aspect-ratio:3/4;border-radius:5px 12px 12px 5px;background:linear-gradient(160deg,#1f4274,#0e1b30 72%);border:1px solid #2d4a73;box-shadow:-7px 9px 0 -2px rgba(0,0,0,.35),0 16px 30px rgba(0,0,0,.45);padding:14px 12px 12px 20px;display:flex;flex-direction:column;justify-content:space-between;overflow:hidden;color:#fff}
+.cover::before{content:"";position:absolute;inset:0 auto 0 0;width:9px;background:rgba(0,0,0,.28)}
+.cover small{font-size:8.5px;font-weight:800;letter-spacing:.1em;color:var(--cta-tx);background:var(--cta);align-self:flex-start;padding:2px 6px;border-radius:3px}
+.cover b{font-size:56px;line-height:.9;color:var(--cta);display:block}
+.cover b span{display:block;font-size:13px;color:#fff;letter-spacing:.04em;margin-top:2px}
+.cover strong{font-size:13.5px;line-height:1.2;color:#fff;display:block}
+.cover i{font-style:normal;font-size:8.5px;letter-spacing:.12em;color:var(--mut);display:block;margin-top:6px}
 .bonus h3{font-size:21px;margin-bottom:8px}
 .bonus p{color:var(--mut)!important}
 .bonus ul{padding-left:0;list-style:none;display:grid;gap:8px;margin:16px 0 0}
@@ -76,8 +83,8 @@ h2{font-size:clamp(23px,5.5vw,34px);margin-bottom:20px}
 /* 4. Rafael */
 .rafael{background:var(--bg2)}
 .rafael .wrap{display:grid;gap:24px}
-.rafael p{color:var(--mut);margin-bottom:14px}
-.rafael img.me{border-radius:18px;width:100%;max-width:340px;aspect-ratio:1;object-fit:cover}
+.rafael p{color:var(--mut);margin-bottom:12px}
+.rafael img.me{border-radius:18px;width:100%;max-width:340px;aspect-ratio:4/3;object-fit:cover;object-position:50% 28%}
 .promise{background:var(--card);border-left:4px solid var(--ok);border-radius:12px;padding:16px 18px;margin-top:8px}
 .promise h3{font-size:17px;margin-bottom:8px}
 .promise ul{padding-left:20px;display:grid;gap:4px}
@@ -117,8 +124,13 @@ footer p+p{margin-top:14px}
   .btn{display:inline-block}
   .hero .btn{display:block}
   .items{grid-template-columns:1fr 1fr}
-  .prints{max-width:760px;margin-inline:auto;gap:16px}
   .rafael .wrap{grid-template-columns:.7fr 1.3fr;align-items:center;gap:48px}
+  .rafael img.me{aspect-ratio:1}
+  .prints{overflow:visible;margin-inline:auto;padding:0;max-width:900px;gap:20px}
+  .prints figure{flex:1}
+  .swipe{display:none}
+  .bonus{grid-template-columns:180px 1fr;justify-items:start;gap:32px;padding:32px}
+  .cover{width:180px}
 }
 @media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
 </style>
@@ -126,29 +138,29 @@ footer p+p{margin-top:14px}
 <body>
 
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
-  <symbol id="i-compass" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="m15.5 8.5-2 5-5 2 2-5z"/></symbol>
-  <symbol id="i-doc" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5M9 13h6M9 17h6"/></symbol>
-  <symbol id="i-clock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></symbol>
+  <symbol id="i-news" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h11a2 2 0 0 1 2 2v13a1 1 0 0 0 1 1H6a2 2 0 0 1-2-2V5a1 1 0 0 1 1-1z"/><path d="M18 8h2v11a1 1 0 0 1-1 1M8 8h6M8 12h6M8 16h4"/></symbol>
+  <symbol id="i-bot" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="8" width="16" height="11" rx="3"/><path d="M12 4v4M9 13v1M15 13v1M2 13v2M22 13v2"/><circle cx="12" cy="3.5" r=".8"/></symbol>
+  <symbol id="i-updown" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 20V5M7 5l-3 3M7 5l3 3M17 4v15M17 19l-3-3M17 19l3-3"/></symbol>
+  <symbol id="i-chat" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a8 8 0 0 1-11.7 7L4 20l1.1-4.6A8 8 0 1 1 21 12z"/><path d="M9 11h6M9 14h4"/></symbol>
 </svg>
 
+<header class="site">
+  <div class="wrap"><img src="assets/logo.svg" width="220" height="44" alt="Radar de Ativos"></div>
+</header>
+
 <!-- 1. Primeira dobra -->
-<header class="hero">
+<section class="hero">
   <div class="wrap">
     <div>
       <h1>Quer começar a investir no maior mercado de capitais do mundo?</h1>
-      <p class="sub">Entre no grupo gratuito do Radar de Ativos e receba diariamente o resumo do mercado, as maiores altas e baixas, análises pré-realizadas de mais de 120 ações da NASDAQ e NYSE, além da consulta a qualquer ativo das bolsas dos EUA.</p>
-      <ul class="gains">
-        <li><svg aria-hidden="true"><use href="#i-compass"/></svg>O que você precisa saber para começar a investir. Sem enrolação.</li>
-        <li><svg aria-hidden="true"><use href="#i-doc"/></svg>Entenda os principais indicadores e receba as análises do nosso BOT.</li>
-        <li><svg aria-hidden="true"><use href="#i-clock"/></svg>Acompanhe o mercado global de forma simples e rápida.</li>
-      </ul>
-      <a class="btn" href="#" data-link="group" data-cta="hero" data-hide-sticky>Quero receber o Radar de Ativos de graça</a>
+      <p class="sub">Grupo gratuito com resumo diário e bot que analisa mais de 120 ações.</p>
+      <a class="btn" href="#" data-link="group" data-cta="hero" data-hide-sticky>Quero o Radar grátis</a>
     </div>
     <div class="visual">
       <img class="foto" src="assets/rafael-hero.webp" width="480" height="480" fetchpriority="high" alt="Rafael Talarico, fundador do Radar de Ativos">
     </div>
   </div>
-</header>
+</section>
 
 <!-- 2. Faixa de confiança -->
 <div class="trust">
@@ -164,20 +176,23 @@ footer p+p{margin-top:14px}
   <div class="wrap">
     <h2>Tudo o que você recebe ao entrar no grupo, de graça</h2>
     <ul class="items">
-      <li><strong>Radar do dia:</strong> Diariamente o resumo do que movimentou e do que está por vir no mercado global.</li>
-      <li><strong>Bot do Radar com mais de 120 ativos:</strong> digite o código de uma ação e receba as informações e a análise em linguagem simples. Funciona no Telegram e no WhatsApp.</li>
-      <li><strong>Maiores altas e baixas:</strong> veja o que mais subiu e o que mais caiu sem precisar abrir dez sites.</li>
-      <li><strong>Espaço para dúvidas:</strong> pergunte no grupo e aprenda também com as perguntas de outros investidores.</li>
+      <li><svg aria-hidden="true"><use href="#i-news"/></svg><div><strong>Radar do dia:</strong> Diariamente o resumo do que movimentou e do que está por vir no mercado global.</div></li>
+      <li><svg aria-hidden="true"><use href="#i-bot"/></svg><div><strong>Bot do Radar com mais de 120 ativos:</strong> digite o código de uma ação e receba as informações e a análise em linguagem simples. Funciona no Telegram e no WhatsApp.</div></li>
+      <li><svg aria-hidden="true"><use href="#i-updown"/></svg><div><strong>Maiores altas e baixas:</strong> veja o que mais subiu e o que mais caiu sem precisar abrir dez sites.</div></li>
+      <li><svg aria-hidden="true"><use href="#i-chat"/></svg><div><strong>Espaço para dúvidas:</strong> pergunte no grupo e aprenda também com as perguntas de outros investidores.</div></li>
     </ul>
 
     <div class="prints">
-      <img src="assets/print-whatsapp-resultados.webp" width="652" height="1280" loading="lazy" alt="Resultados trimestrais de uma ação no bot do Radar">
-      <img src="assets/print-whatsapp-setor.webp" width="652" height="1280" loading="lazy" alt="Lista de ativos do setor Real Estate no bot do Radar">
-      <img src="assets/print-radar.webp" width="652" height="1280" loading="lazy" alt="Resumo do dia do Radar no WhatsApp">
+      <figure><img src="assets/print-whatsapp-resultados.webp" width="652" height="1280" loading="lazy" alt="Resultados trimestrais de uma ação no bot do Radar"><figcaption>Consulte uma ação no bot</figcaption></figure>
+      <figure><img src="assets/print-whatsapp-setor.webp" width="652" height="1280" loading="lazy" alt="Lista de ativos do setor Real Estate no bot do Radar"><figcaption>Explore ativos por setor</figcaption></figure>
+      <figure><img src="assets/print-radar.webp" width="652" height="1280" loading="lazy" alt="Resumo do dia do Radar no WhatsApp"><figcaption>Receba o Radar do dia</figcaption></figure>
     </div>
+    <p class="swipe" aria-hidden="true">Deslize para ver mais →</p>
     <p class="caption">Simples assim: você pergunta, o Radar explica.</p>
 
     <div class="bonus">
+      <div class="cover" aria-hidden="true"><small>GUIA GRATUITO</small><b>5<span>PASSOS</span></b><div><strong>Abra sua conta global</strong><i>RADAR DE ATIVOS</i></div></div>
+      <div>
       <h3>Bônus: Guia "Abra sua conta global em 5 passos"</h3>
       <p>O checklist com tudo o que você precisa antes da primeira compra nos EUA:</p>
       <ul>
@@ -187,8 +202,9 @@ footer p+p{margin-top:14px}
         <li>Como comparar custos de câmbio e transferência</li>
         <li>Como organizar seus registros para a declaração no Brasil</li>
       </ul>
+      </div>
     </div>
-    <a class="btn" href="#" data-link="group" data-cta="recebe">Quero o Radar de Ativos e o guia de graça</a>
+    <a class="btn" href="#" data-link="group" data-cta="recebe">Quero o Radar e o guia</a>
   </div>
 </section>
 
@@ -199,8 +215,8 @@ footer p+p{margin-top:14px}
     <div>
       <h2>Eu fiz esse caminho antes de te mostrar</h2>
       <p>Prazer, meu nome é Rafael Ribeiro. Sou empresário, programador e investidor nas maiores bolsas de valores do mundo: NASDAQ e NYSE.</p>
-      <p>Quando comecei a investir nos EUA, minha principal dificuldade era não saber por onde começar: o que analisar, quais eram os principais indicadores e entender o que de fato era relevante analisar. Era um mundo à parte para mim e eu levava muito tempo neste processo. Hoje mantenho uma carteira dolarizada que acompanho diariamente com as ferramentas que eu criei para encurtar este processo de análise dos ativos.</p>
-      <p>Criei o Radar de Ativos para ser o guia que eu queria ter tido no começo: explicações simples, análises resumidas mas com o que eu realmente preciso saber antes de investir.</p>
+      <p>Quando comecei a investir nos EUA, minha maior dificuldade era não saber por onde começar nem o que de fato analisar. Eu levava muito tempo nesse processo. Hoje acompanho minha carteira dolarizada todos os dias com as ferramentas que criei para encurtar essa análise.</p>
+      <p>Criei o Radar de Ativos para ser o guia que eu queria ter tido no começo: explicações simples e análises resumidas, só com o que importa antes de investir.</p>
       <div class="promise">
         <h3>Meu compromisso com você</h3>
         <ul>
@@ -232,7 +248,7 @@ footer p+p{margin-top:14px}
     <ul>
       <li>Radar do dia</li><li>Bot com trial de 7 dias com mais de 120 ativos e seus indicadores resumidos</li><li>Maiores altas e baixas</li><li>Espaço para dúvidas</li><li>Guia da conta global</li>
     </ul>
-    <a class="btn" href="#" data-link="group" data-cta="final" data-hide-sticky>Quero receber o Radar de Ativos de graça</a>
+    <a class="btn" href="#" data-link="group" data-cta="final" data-hide-sticky>Quero o Radar grátis</a>
     <a class="alt" href="#" data-link="bot" data-cta="whatsapp_bot">Prefere o WhatsApp? Fale com o bot do Radar</a>
   </div>
 </section>
@@ -252,7 +268,7 @@ footer p+p{margin-top:14px}
 
 <!-- Botão fixo: some enquanto um botão principal já está visível na tela -->
 <div class="sticky" id="sticky">
-  <a class="btn" href="#" data-link="group" data-cta="sticky">Quero receber o Radar de Ativos de graça</a>
+  <a class="btn" href="#" data-link="group" data-cta="sticky">Quero o Radar grátis</a>
 </div>
 
 <script>
